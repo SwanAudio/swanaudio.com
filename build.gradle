@@ -11,19 +11,11 @@ repositories {
 
 jettyRun.contextPath = ''
 
-// ------------------------------------------------------------------
-//  Build Rules
-// ------------------------------------------------------------------
 tasks.withType(ScalaCompile) {
         scalaCompileOptions.additionalParameters = ['-target:jvm-1.6']
 }
 
 dependencies {
-    scalaTools (
-        [group: 'org.scala-lang',   name: 'scala-compiler', version: scalaFullVersion],
-        [group: 'org.scala-lang',   name: 'scala-library',  version: scalaFullVersion]
-    )
-
     compile (
         [group: 'org.scala-lang',   name: 'scala-library',              version: scalaFullVersion],
         [group: 'net.liftweb',      name: "lift-common_$scalaVersion",  version: liftVersion],
