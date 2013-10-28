@@ -1,0 +1,42 @@
+// ------------------------------------------------------------------
+//  Swan Audio
+//      Build Configuration
+// ------------------------------------------------------------------
+apply {
+    plugin: 'scala'
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+// ------------------------------------------------------------------
+//  Configuration
+// ------------------------------------------------------------------
+
+sourceSets {
+    main {
+        scala {
+            srcDirs = ['src/scala']
+        }
+    }
+    test {
+        scala {
+            srcDircs = ['test/scala']
+        }
+    }
+}
+
+// ------------------------------------------------------------------
+//  Build Rules
+// ------------------------------------------------------------------
+
+dependencies {
+    scalaCompile 'org.scala-lang:scala-compiler:$scalaVersion'
+    scalaLibrary 'org.scala-lang:scala-library:$scalaVersion'
+
+    compile 'org.scala-lang:scala-library:$scalaVersion',
+        'net.liftweb:lift-common_$scalaVersion:$liftVersion',
+        'net.liftweb:lift-webkit_$scalaVersion:$liftVersion'
+}
