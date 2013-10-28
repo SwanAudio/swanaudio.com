@@ -2,24 +2,31 @@
 //  Swan Audio
 //      Build Configuration
 // ------------------------------------------------------------------
-apply {
-    plugin: 'scala'
-}
+apply plugin: 'scala'
+apply plugin: 'jetty'
 
 repositories {
     mavenCentral()
 }
 
+jettyRun.contextPath = ''
 
 // ------------------------------------------------------------------
 //  Build Rules
 // ------------------------------------------------------------------
+tasks.withType(ScalaCompile) {
+        scalaCompileOptions.additionalParameters = ['-target:jvm-1.6']
+}
 
 dependencies {
-    scalaCompile 'org.scala-lang:scala-compiler:$scalaVersion'
-    scalaLibrary 'org.scala-lang:scala-library:$scalaVersion'
+    scalaTools (
+        [group: 'org.scala-lang',   name: 'scala-compiler', version: scalaFullVersion],
+        [group: 'org.scala-lang',   name: 'scala-library',  version: scalaFullVersion]
+    )
 
-    compile 'org.scala-lang:scala-library:$scalaVersion',
-        'net.liftweb:lift-common_$scalaVersion:$liftVersion',
-        'net.liftweb:lift-webkit_$scalaVersion:$liftVersion'
+    compile (
+        [group: 'org.scala-lang',   name: 'scala-library',              version: scalaFullVersion],
+        [group: 'net.liftweb',      name: "lift-common_$scalaVersion",  version: liftVersion],
+        [group: 'net.liftweb',      name: "lift-webkit_$scalaVersion",  version: liftVersion]
+    )
 }
