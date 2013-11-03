@@ -1,0 +1,53 @@
+/* ===========================================================================/
+ *  style.css
+ *      I'm really not a front end guy.
+/* ==========================================================================*/
+
+body {
+    color: #505050;
+    background: #e0e0e0 url("../img/bg_body.png") top repeat-x; }
+
+hr { 
+    border: none;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #eee;
+    margin: .525em 0; }
+
+/* Warnings =================================================================*/
+#noscriptwarn {
+    background: url("../img/warn.png") no-repeat left;
+    border: 3px solid #200;
+    margin: 25px auto;
+    padding: 25px 0px 25px 115px; 
+    width: 50%; }
+
+/* Product Rotator ==========================================================*/
+div#productHighlight img { width: 100%; }
+div#productHighlight input { display: none; }
+div#productHighlight label { color: #777; cursor: pointer; }
+  div#productHighlight label:hover { color: #333; }
+
+#slide1:checked ~ div#slides ul.inner { margin-left: 0; }
+#slide2:checked ~ div#slides ul.inner { margin-left: -100%; }
+#slide3:checked ~ div#slides ul.inner { margin-left: -200%; }
+#slide4:checked ~ div#slides ul.inner { margin-left: -300%; }
+#slide5:checked ~ div#slides ul.inner { margin-left: -400%; }
+
+#slide1:checked ~ #active label:nth-child(1),
+#slide2:checked ~ #active label:nth-child(2),
+#slide3:checked ~ #active label:nth-child(3),
+#slide4:checked ~ #active label:nth-child(4),
+#slide5:checked ~ #active label:nth-child(5) { color: #000; }
+
+div#slides { overflow: hidden; width: 100%; }
+ul.inner {
+    line-height: 0;
+    width: 500%;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out; } 
+  ul.inner li { float: left; width: 20%; }
+
+/* ==========================================================================*/
