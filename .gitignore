@@ -1,6 +1,3 @@
 *.class
 *.log
-
-# build specific
-build/*
-.gradle/*
+target/*
