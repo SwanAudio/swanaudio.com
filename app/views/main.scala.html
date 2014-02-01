@@ -3,13 +3,26 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
-    </head>
-    <body>
-        @content
-    </body>
+<head>
+  <title>@title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="screen" href="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))">
+  <link rel="stylesheet" media="screen" href="@routes.Assets.at("css/main.css")">
+  <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  Navigation, or user account stuff
+</nav>
+<div class="container">
+  @content
+<hr>
+<footer class="row small">
+  <div class="col-xs-6 text-left">Copyright &copy; 2014 Swan Audio. All rights reserved.</div>
+  <div class="col-xs-6 text-right"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></div>
+</footer>
+</div>
+<script src="@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))" type="text/javascript"></script>
+<script src="@routes.WebJarAssets.at(WebJarAssets.locate("ember.min.js"))" type="text/javascript"></script>
+</body>
 </html>

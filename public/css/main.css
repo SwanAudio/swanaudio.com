@@ -1,0 +1,11 @@
+body {
+    color: #505050;
+    background: #e0e0e0 url("/assets/images/bg_body.png") top repeat-x;
+}
+
+hr { 
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #eee;
+    margin-bottom: .525em;
+}
+
