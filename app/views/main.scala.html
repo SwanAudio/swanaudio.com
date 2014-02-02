@@ -11,8 +11,14 @@
   <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top">
-  Navigation, or user account stuff
+<nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
+  <div class="container">
+    <a href="#" class="navbar-brand">Swan Audio</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Login / Register</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-usd"></span>0.00</a></li>
+    </ul>
+  </div>
 </nav>
 <div class="container">
   @content
