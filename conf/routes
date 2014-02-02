@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index
+GET     /newsfeed                   controllers.Newsfeed.index
 
 # STATIC ROUTES
 # Map static resources from the /public folder to the /assets URL path
