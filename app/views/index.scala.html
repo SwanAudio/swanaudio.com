@@ -1,27 +1,80 @@
 @main("Swan Audio", javascript) {
-<div class="row">
-  <div id="news-feed" class="col-md-8">
-    <script type="text/x-handlebars" data-template-name="index">
+<section id="product-slider">
+  <div id="product-slider-main" class="carousel slide" data-ride="carousel" data-interval="0">
+    <!-- carousel -->
+    <div class="carousel-inner">
+      <div class="item active holderjs">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Example headline.</h1>
+            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item holderjs">
+        <div class="carousel-caption">
+          <h1>Another example headline.</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+      </div>
+
+      <div class="item holderjs">
+        <div class="carousel-caption">
+          <h1>One more for good measure.</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="carousel-control left" href="#product-slider-main" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#product-slider-main" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</section>
+
+<section class="container">
+  <div class="row text-center">
+    <div class="col-md-3">
+      <h1>Cables</h1>
+    </div>
+    <div class="col-md-3">
+      <h1>Electronics</h1>
+    </div>
+    <div class="col-md-3">
+      <h1>Modifications</h1>
+    </div>
+    <div class="col-md-3">
+      <h1>Repairs</h1>
+    </div>
+  </div>
+</section>
+
+<script type="text/x-handlebars" data-template-name="index">
+<section class="container">
+  <div class="row">
+    <div id="news-feed" class="col-md-12">
     {{#each}}
     <div class="news-post row">
       <div class="col-md-12">
         <h3>{{title}}</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </div>
     {{/each}}
-    </script>
+    </div>
   </div>
-  <div class="col-md-4">
-    <h4>Spotlight</h4>
-    <img src="/assets/images/r1.jpg" alt="Product 1">
-  </div>
-</div>
+</section>
+</script>
 }
 
 @javascript = {

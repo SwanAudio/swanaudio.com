@@ -4,6 +4,8 @@
 
 # Home page
 GET     /                           controllers.Application.index
+GET     /contact                    controllers.Application.contact
+
 GET     /newsfeed                   controllers.Newsfeed.index
 
 # STATIC ROUTES

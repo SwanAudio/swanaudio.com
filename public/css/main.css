@@ -8,3 +8,44 @@ hr {
     border-bottom: 1px solid #eee;
     margin-bottom: .525em;
 }
+
+.item { background: url(?holder.js/1800x450/sky) no-repeat center; height: 450px; }
+
+/* Bootstrap Overrides */
+.navbar { margin: 0; }
+.breadcrumb { background: none; margin: 0; }
+
+/* Generic Styling */
+#page-header { 
+    border-bottom: 1px solid #333;
+}
+
+/* TODO: Replace this with buttons */
+ul.social {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.social li { display: inline-block; padding-left: 10px;}
+/* END TODO */
+
+figure { position: relative; overflow: hidden; }
+figure figcaption {
+    position: absolute;
+    height: 32px;
+    width: 100%;
+    background: rgba(255,255,255,.75);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+figure:hover figcaption {
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 1;
+}
