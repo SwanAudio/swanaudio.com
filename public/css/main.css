@@ -9,7 +9,7 @@
 
 body {
     color: #505050;
-    background: #e0e0e0 url("/assets/images/bg_body.png") top repeat-x;
+    background: #e5E1D9;
 }
 
 hr { 
@@ -22,23 +22,20 @@ hr {
 
 /* Bootstrap Overrides */
 .navbar { margin: 0; }
-.breadcrumb { background: none; margin: 0; }
+.navbar-default .navbar-nav>li>a { color: #FFFAF1; }
+.navbar-default .navbar-nav>li>a:active { color: #F32A3A; }
+
+/* Carousel */
+#product-slider { margin-bottom: 1%; }
 
 /* Generic Styling */
-#page-header { 
-    border-bottom: 1px solid #333;
-}
-
 .minibar {}
 .minibar-dark { background: #353432; border-bottom: 1px solid #7F7D78; }
 
 .navbar-dark { background: #403F3C; border-bottom: 1px solid #E5E1D9;}
 
-.column-1 {
-    background: #fff;
-}
+.column-1 { background: #fff; box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25); padding: 1% 5%; }
 
-/* TODO: Replace this with buttons */
 ul.social {
     display: block;
     list-style: none;
@@ -46,7 +43,6 @@ ul.social {
     padding: 0;
 }
 ul.social li { display: inline-block; padding-left: 10px;}
-/* END TODO */
 
 figure { position: relative; overflow: hidden; }
 figure figcaption {
