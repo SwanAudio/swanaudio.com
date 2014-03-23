@@ -1,3 +1,12 @@
+/* Colours from Adobe Kular:
+ *
+ * 353432
+ * 7F7D78
+ * FFFAF1
+ * 403F3C
+ * E5E1D9
+ * */
+
 body {
     color: #505050;
     background: #e0e0e0 url("/assets/images/bg_body.png") top repeat-x;
@@ -18,6 +27,15 @@ hr {
 /* Generic Styling */
 #page-header { 
     border-bottom: 1px solid #333;
+}
+
+.minibar {}
+.minibar-dark { background: #353432; border-bottom: 1px solid #7F7D78; }
+
+.navbar-dark { background: #403F3C; border-bottom: 1px solid #E5E1D9;}
+
+.column-1 {
+    background: #fff;
 }
 
 /* TODO: Replace this with buttons */

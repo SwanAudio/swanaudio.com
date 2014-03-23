@@ -11,7 +11,20 @@
 </head>
 <body>
 <header>
-  <nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
+  <div class="minibar minibar-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-right">
+          <ul class="social">
+            <li><a href="https://twitter.com/swanaudio"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/SwanAudio"><i class="fa fa-github"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-default navbar-static-top navbar-dark" role="navigation">
     <div class="container">
       <ul class="nav navbar-nav navbar-left">
         <li><a href="@routes.Application.index" class="navbar-brand">Swan Audio</a></li>
@@ -22,25 +35,9 @@
         <li><a href="#">Research</a></li>
         <li><a href="@routes.Application.contact">About</a></li>
         <li><a href="#">News</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Empty</a></li>
       </ul>
     </div>
   </nav>
-  <div id="page-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h4>@title</h4>
-        </div>
-        <div class="col-md-6 text-right">
-          <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li class="active">Foo</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
 </header>
 @content
 <div class="container">
