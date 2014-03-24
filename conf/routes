@@ -5,6 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index
 GET     /contact                    controllers.Application.contact
+GET     /product                    controllers.Application.products
 
 GET     /newsfeed                   controllers.Newsfeed.index
 

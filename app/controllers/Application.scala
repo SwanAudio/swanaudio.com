@@ -13,4 +13,8 @@ object Application extends Controller {
     Ok(views.html.contact())
   }
 
+  def products = Action {
+    Ok(views.html.products())
+  }
+
 }
