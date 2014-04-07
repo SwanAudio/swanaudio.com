@@ -2,18 +2,18 @@
   <nav>
     NAVIGATION (Breadcrumb? Dropdown?)
   </nav>
-  <section class="container column-1">
+  <section ng-controller="img-swap" class="container column-1">
     <div class="row">
       <div class="col-sm-12  hidden-xs">
-
         <div class="row">
           <div class="col-md-8">
-            <img data-src="holder.js/800x400/auto/lava/text:Product Picture" class="img-responsive center-block">
+            <img ng-src="holder.js/800x400/auto/lava/text:{{activeImage.label}}" data-src="holder.js/800x400/auto/lava/text:Product Picture" class="img-responsive center-block">
             <ul class="list-inline">
-              <li><img src="holder.js/100x100/auto/text:Image 1" alt="" /></li>
-              <li><img src="holder.js/100x100/auto/text:Image 2" alt="" /></li>
-              <li><img src="holder.js/100x100/auto/text:Image 3" alt="" /></li>
-              <li><img src="holder.js/100x100/auto/text:Image 4" alt="" /></li>
+              <li ng-repeat="img in product.images">
+                <img ng-src="holder.js/100x100/auto/text:{{img.label}}" alt="{{img.alt}}">
+              </li>
+              <!-- Delete next line -->
+              <li><img src="holder.js/100x100/auto/text:Image 4" alt=""></li>
             </ul>
           </div>
           <div class="col-md-4">
