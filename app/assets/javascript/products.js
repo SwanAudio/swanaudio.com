@@ -1,17 +1,24 @@
+'use strict';
+
 var app = angular.module('swanaudio', []);
 
-app.controller('img-swap', function ($scope) { 
+app.controller('img-swap', ['$scope', '$http', 
+  function ($scope, $http) { 
     $scope.images = [{
-        id: 1,
-        label: '',
-        url: ''
+      id: 1,
+      label: '',
+      url: ''
     },{
-        id: 2,
-        label: '',
-        url: ''
+      id: 2,
+      label: '',
+      url: ''
     }];
 
-    $scope.$watch('', function(id) {
-
+    $http.get('product/list').success(function(data) {
+      $scope.products = data
     });
-});
+
+    $scope.$watch('', function(id) {
+    });
+  }
+]);
