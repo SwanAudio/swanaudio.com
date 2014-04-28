@@ -59,18 +59,52 @@ object Products extends Controller {
       ),
       "specs" -> Json.arr(
         Json.obj(
-          "Capacitance @ 100Hz" -> "75pF +/- 5pF",
-          "Capacitance @ 10kHz" -> "85pF +/- 10pF",
-          "3dB Low Frequency" -> "24Hz +/- 2Hz",
-          "3dB High Frequency" -> "111kHz +/- 10kHz",
-          "Conductor ohms / m" -> "0.5 ohm +/ 0.1ohm",
-          "Shield ohms / m" -> "0.8 ohm +/ 0.1ohm",
-          "Bend Radius" -> "0.25 m",
-          "Conductor Size" -> "22 AWG",
-          "Shield Size" -> "22 AWG",
-          "Primary Shield Type" -> "Double Reussen Copper Weave",
-          "Secondary Shield Type" -> "Radiated Carbon Jacket",
-          "Cable Outer Jacket" -> "Black PVC"
+          "key" -> "Capacitance @ 100Hz",
+          "measure" -> "75pF +/- 5pF"
+        ),
+        Json.obj(
+          "key" -> "Capacitance @ 10kHz",
+          "measure" -> "85pF +/- 10pF"
+        ),
+        Json.obj(
+          "key" -> "3dB Low Frequency",
+          "measure" -> "24Hz +/- 2Hz"
+        ),
+        Json.obj(
+          "key" -> "3dB High Frequency",
+          "measure" -> "111kHz +/- 10kHz"
+        ),
+        Json.obj(
+          "key" -> "Conductor ohms / m",
+          "measure" -> "0.5 ohm +/ 0.1ohm"
+        ),
+        Json.obj(
+          "key" -> "Shield ohms / m",
+          "measure" -> "0.8 ohm +/ 0.1ohm"
+        ),
+        Json.obj(
+          "key" -> "Bend Radius",
+          "measure" -> "0.25 m"
+        ),
+        Json.obj(
+          "key" -> "Conductor Size",
+          "measure" -> "22 AWG"
+        ),
+        Json.obj(
+          "key" -> "Shield Size",
+          "measure" -> "22 AWG"
+        ),
+        Json.obj(
+          "key" -> "Primary Shield Type",
+          "measure" -> "Double Reussen Copper Weave"
+        ),
+        Json.obj(
+          "key" -> "Secondary Shield Type",
+          "measure" -> "Radiated Carbon Jacket"
+        ),
+        Json.obj(
+          "key" -> "Cable Outer Jacket",
+          "measure" -> "Black PVC"
         )
       ),
       "graphs" -> Json.arr(

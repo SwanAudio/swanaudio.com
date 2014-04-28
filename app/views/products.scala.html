@@ -1,7 +1,7 @@
 @main("Products", javascript) {
-<nav>
-  NAVIGATION (Breadcrumb? Dropdown?)
-</nav>
+<!--<nav>
+  TODO: NAVIGATION (Breadcrumb? Dropdown?)
+</nav>-->
 <section ng-controller="img-swap" class="container column-1">
   <div class="row">
     <div class="col-sm-12  hidden-xs">
@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-4">
           <h4>{{product.name}}</h4>
-          <!-- Options can vary from product to product -->
+          <!-- TODO: Options can vary from product to product -->
           <form class="form-horizontal" role="form">
             <div class="form-group">
               <label for="option1" class="col-md-5 control-label">Cable Length</label>
@@ -61,9 +61,9 @@
                 <th></th>
               </thead>
               <tbody>
-                <tr ng-repeat="i in [1,2,3,4]">
-                  <td>Spec</td>
-                  <td>Measure</td>
+                <tr ng-repeat="spec in product.specs" class="small">
+                  <td>{{spec.key}}</td>
+                  <td>{{spec.measure}}</td>
                 </tr>
               </tbody>
             </table>
