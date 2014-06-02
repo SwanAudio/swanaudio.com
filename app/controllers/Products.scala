@@ -50,9 +50,16 @@ object Products extends Controller {
           "label" -> "Cable Length",
           "options" -> Json.arr(
             Json.obj(
-              "1" -> "1 Meter",
-              "2" -> "2 Meter",
-              "3" -> "3 Meter"
+              "id" -> "1",
+              "value" -> "1 Meter"
+            ),
+            Json.obj(
+              "id" -> "2",
+              "value"-> "2 Meter"
+            ),
+            Json.obj(
+              "id" -> "3",
+              "value" -> "3 Meter"
             )
           )
         )

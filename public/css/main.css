@@ -39,15 +39,15 @@ hr {
 ul.social {
     display: block;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 2px 0;
 }
-ul.social li { display: inline-block; padding-left: 10px;}
+ul.social li { display: inline-block; border-left: 1px solid #eee; width: 20px; }
+ul.social li:last-child { margin-right: 3%; }
 
 figure { position: relative; overflow: hidden; }
 figure figcaption {
     position: absolute;
-    height: 32px;
+    height: 24px;
     width: 100%;
     background: rgba(255,255,255,.75);
     -webkit-transition: all 0.3s ease;
