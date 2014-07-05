@@ -11,5 +11,5 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-rjs" % "1.0.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.0.0")
 
-// Auto Refresh (Broken on 2.3)
-//addSbtPlugin("com.jamesward" %% "play-auto-refresh" % "0.0.7")
+// Auto Refresh
+addSbtPlugin("com.jamesward" %% "play-auto-refresh" % "0.0.8")

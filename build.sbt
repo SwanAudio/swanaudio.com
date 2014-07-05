@@ -12,4 +12,4 @@ libraryDependencies ++= Seq(
   "org.webjars" % "angularjs" % "1.3.0-beta.2"
 )
 
-//com.jamesward.play.BrowserNotifierPlugin.livereload
+com.jamesward.play.BrowserNotifierPlugin.livereload
