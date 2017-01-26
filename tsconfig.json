@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "system",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators":true,
+    "sourceMap": true,
+    "mapRoot": "/assets",
+    "sourceRoot": "/assets",
+    "rootDirs": ["app/assets","test/assets"],
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "target/web/node-modules/main/webjars/*"
+      ]
+    },
+    "noImplicitAny":true,
+    "noFallthroughCasesInSwitch":true,
+    "noImplicitReturns":true,
+    "noImplicitThis":true,
+    "outDir": "./target/ts",
+    "lib": ["es6", "dom"]
+  },
+  "exclude": [
+    "node_modules",
+    "project/target",
+    "typings/main",
+    "typings/main.d.ts",
+    "typings/browser",
+    "target/web"
+  ]
+}

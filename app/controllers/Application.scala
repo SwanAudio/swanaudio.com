@@ -3,18 +3,12 @@ package controllers
 import play.api._
 import play.api.mvc._
 
-object Application extends Controller {
+class Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index())
+    Ok(views.html.main())
   }
 
-  def contact = Action {
-    Ok(views.html.contact())
-  }
-
-  def products = Action {
-    Ok(views.html.products())
-  }
+  def angular(view: String) = index
 
 }

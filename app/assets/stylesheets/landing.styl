@@ -1,0 +1,20 @@
+@require '_colors'
+
+.feature
+  flex: 1 0 auto
+  background: url('/assets/bg_tube.jpg') no-repeat center center
+  background-size: cover
+  min-height: 350px
+  padding: 10vh 5vw
+
+.accents
+  display: flex
+  flex-direction: row
+
+  @media (max-width: 500px)
+    flex-direction: column
+
+  &>div
+    flex: 1 1 0
+    padding: 20px
+    text-align: center

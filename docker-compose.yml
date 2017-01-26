@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  ##
+  # Main application image.
+  # Mounts the local code and provides access to SBT.
+  web:
+    image: pitchplay/scala-dev:jdk8-web
+    command: '~run'
+    volumes:
+        - .:/usr/src/app
+        - /root/.ivy2
+    ports:
+      - "9000:9000"

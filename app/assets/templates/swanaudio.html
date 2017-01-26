@@ -1,0 +1,47 @@
+<header>
+  <a routerLink="/">
+    <img src='assets/swan-audio-logo-final-842x595-png8-weboptimized.png' alt='Swan Audio'>
+  </a>
+  <nav>
+    <a routerLink="/services" routerLinkActive="active">Services</a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <a routerLink="/heroes" routerLinkActive="active">Contact</a>
+  </nav>
+  <span class='flex'></span>
+  <aside>
+    <a target='_blank' href="https://twitter.com/swanaudio"><i class='fa fa-twitter'></i></a>
+    <a target='_blank' href="#"><i class='fa fa-facebook'></i></a>
+    <a target='_blank' href="https://www.youtube.com/channel/UCzVBh8sJ172X9HjcWMDyvBQ"><i class='fa fa-youtube'></i></a>
+    <a target='_blank' href="https://www.instagram.com/swan.audio"><i class='fa fa-instagram'></i></a>
+  </aside>
+</header>
+<main role='main'>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <div>
+    <section>
+      <h5>About Us</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    <recent-tweets></recent-tweets>
+    <recent-instagram></recent-instagram>
+  </div>
+
+  <hr>
+
+  <div>
+    <ul>
+      <li><a>Blog</a></li>
+      <li><a>Terms</a></li>
+      <li><a>Privacy</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+
+    <span class='flex'></span>
+
+    <span>Swan Audio Inc. &copy; 2017</span>
+    <!-- replace with just head -->
+    <img src='assets/swan-audio-logo-final-842x595-png8-weboptimized.png' alt='Swan Audio' height='50px'>
+  </div>
+</footer>

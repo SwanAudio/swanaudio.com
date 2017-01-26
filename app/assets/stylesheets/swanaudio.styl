@@ -1,0 +1,90 @@
+@import '_colors'
+
+header
+  background: bg-5
+  display: flex
+  flex: 0 0 auto
+  flex-direction: row
+  align-items: center
+
+  &>a>img
+    height: 55px
+    margin: 0 10px
+
+  &>aside
+    padding: 0 30px
+
+  &>nav, &>aside
+    &>a
+      display: inline-block
+      padding: 15px 10px 0px
+
+  &>nav>a.active
+    color: accent
+
+main
+  display: flex
+  flex: 1 0 auto
+
+  & >>> >*:not(:first-child)
+    display: flex
+    flex: 1 0 auto
+    flex-direction: column
+
+  .hero
+    padding: 100px 0
+    text-align: center
+
+    h1
+      color: font-light
+    h2
+      color: accent
+
+  section
+    padding: 97px 20px
+
+footer
+  background: bg-4
+  color: font-light
+  padding: 10px 0
+  display: flex
+  flex: 0 0 auto
+  flex-direction: column
+  align-content: stretch
+  align-items: stretch
+  justify-content: flex-start
+
+  hr
+    border: 0
+    border-top: 1px solid border-light
+    width: 100%
+    max-width: 1440px
+    margin: 20px auto
+
+  &>div
+    display: flex
+    flex-direction: row
+    width: 100%
+    max-width: 1440px
+    margin: 0 auto
+
+    @media (max-width: 500px)
+      flex-direction: column
+
+    section, recent-tweets, recent-instagram
+      display: block
+      flex: 1 0 0
+      padding: 0 30px
+
+      p, ul
+        color: font-light-secondary
+
+    &>ul
+      display: flex
+      list-style-type: none
+      margin: 0
+      padding: 0
+
+      &>li
+        flex: 1 0 auto
+        padding: 0 10px
