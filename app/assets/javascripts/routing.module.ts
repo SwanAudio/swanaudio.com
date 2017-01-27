@@ -8,6 +8,7 @@ import { ServicesComponent }    from './services.component'
 
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
+  { path: 'products/:product', component: ProductsComponent, outlet: 'product' },
   { path: 'services', component: ServicesComponent },
   { path: 'news',     component: NewsComponent },
   { path: '',         component: LandingComponent, pathMatch: 'full' },

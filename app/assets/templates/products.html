@@ -1,13 +1,13 @@
 <nav>
   <ul>
     <li>
-      <a href>
+      <a [routerLink]="[{outlets: { product: ['cable'] } }]">
         <img src='assets/cable-plug.svg'>
         <span>Instrument Cable</span>
       </a>
     </li>
     <li>
-      <a href>
+      <a [routerLink]="[{outlets: { product: ['mic'] } }]">
         <img src='assets/cable-xlr.svg'>
         <span>Microphone Cable</span>
       </a>
@@ -15,7 +15,55 @@
   </ul>
 </nav>
 
-<section>
-  <h2>Product Page</h2>
-  ...
-</section>
+<article>
+  <h2>Instrument Cable</h2>
+  <p>Witty Quote Man</p>
+
+  <aside>
+    <section class='bg-2'>
+      <h3>Specifications</h3>
+      <dl>
+        <dt><span>Spec 1</span></dt>
+        <dd><span>Value</span></dd>
+        <dt><span>Spec 2</span></dt>
+        <dd><span>Value</span></dd>
+        <dt><span>Spec 3</span></dt>
+        <dd><span>Value</span></dd>
+      </dl>
+    </section>
+
+    <section class='bg-2'>
+      <!-- Product Freq Graph -->
+      <!-- use data instead of image ? -->
+      <img src="" alt="" width='100%' height='75px'>
+    </section>
+  </aside>
+
+  <section class='bg-2'>
+    <!-- Product Image -->
+
+    <!-- product description -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <!-- product features -->
+    <h3>Features</h3>
+    <ul>
+      <li>Feature 1</li>
+      <li>Feature 2</li>
+      <li>Feature 3</li>
+      <li>Feature 4</li>
+    </ul>
+
+    <!-- product video / audio / additional images -->
+
+    <!-- product options -->
+    <h3>Available Options</h3>
+    <ul class='inline-list'>
+      <li><img src="" alt="" height='50px' width='50px'></li>
+      <li><img src="" alt="" height='50px' width='50px'></li>
+      <li><img src="" alt="" height='50px' width='50px'></li>
+      <li><img src="" alt="" height='50px' width='50px'></li>
+    </ul>
+
+  </section>
+</article>

@@ -39,7 +39,62 @@ nav
       span
         font-size: 11px
 
-section
+article
   background: rgba(bg-1, .87)
-  padding-top: 87px
-  text-align: center
+  padding: 37px 5vw
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+
+  &>h2
+    flex: 1 0 50%
+    margin-top: 0
+
+  &>p
+    flex: 1 0 50%
+    margin: 0
+    color: font-muted
+    font-size: 18px
+    letter-spacing: 0.1em
+    text-align: right
+
+  h3
+    margin-top: 0
+
+  &>aside
+    flex: 0 1 20%
+
+    section+section
+      margin-top: 20px
+
+  section
+    padding: 20px
+
+  &>section
+    flex: 1 0 0
+    margin-left: 2vw
+
+  dl
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    color: font-secondary
+
+    span
+      display: block
+      margin: 5px 10px
+
+    &>*
+      border-bottom: 1px solid border-dark
+
+    &>dt
+      flex: 0 0 50%
+
+    &>dd
+      flex: 0 0 50%
+      margin-left: auto
+      text-align: right
+
+  .inline-list
+    justify-content: center
+    text-align: center
