@@ -7,13 +7,13 @@ import { HttpModule }    from '@angular/http'
 import { RoutingModule } from './routing.module'
 
 /* Components */
-import { AppComponent }             from './swanaudio.component'
-import { RecentTweetsComponent }    from './recent-tweets.component'
-import { RecentInstagramComponent } from './recent-instagram.component'
-import { ProductsComponent }        from './products.component'
-import { NewsComponent }            from './news.component'
-import { ServicesComponent }        from './services.component'
-import { LandingComponent }         from './landing.component'
+import { AppComponent }             from './components/swanaudio.component'
+import { RecentTweetsComponent }    from './components/recent-tweets.component'
+import { RecentInstagramComponent } from './components/recent-instagram.component'
+import { ProductsComponent }        from './components/products.component'
+import { NewsComponent }            from './components/news.component'
+import { ServicesComponent }        from './components/services.component'
+import { LandingComponent }         from './components/landing.component'
 
 /* Services */
 import { TwitterService }           from './services/twitter.service'

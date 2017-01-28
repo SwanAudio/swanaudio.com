@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 
-import { TwitterService } from './services/twitter.service'
+import { TwitterService } from '../services/twitter.service'
 
 @Component({
   selector: 'recent-tweets',
