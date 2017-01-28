@@ -16,7 +16,7 @@ import { ServicesComponent }        from './services.component'
 import { LandingComponent }         from './landing.component'
 
 /* Services */
-// ...
+import { TwitterService }           from './services/twitter.service'
 
 @NgModule({
   imports: [
@@ -34,7 +34,9 @@ import { LandingComponent }         from './landing.component'
     NewsComponent,
     ServicesComponent,
   ],
-  providers: [ ],
+  providers: [
+    TwitterService,
+  ],
   bootstrap: [ AppComponent ],
 })
 export class AppModule { }

@@ -10,6 +10,9 @@ libraryDependencies ++= {
   val ngVersion = "2.4.4"
 
   Seq(
+    ws,
+    cache,
+
     "org.webjars.npm" % "angular__common" % ngVersion,
     "org.webjars.npm" % "angular__compiler" % ngVersion,
     "org.webjars.npm" % "angular__core" % ngVersion,

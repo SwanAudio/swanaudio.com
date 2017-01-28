@@ -4,16 +4,16 @@
 
 # Home page
 # ~~~~
-GET     /                           controllers.Application.index
+GET     /                                   controllers.Application.index
 
 # Angular API's
 # ~~~~
-
+GET     /api/twitter/timeline               controllers.Twitter.timeline
 
 # STATIC ROUTES
 # ~~~~
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /assets/*file                       controllers.Assets.versioned(path="/public", file: Asset)
 
 # Angular Fallback
 # ~~~~
-GET     /*view                      controllers.Application.angular(view)
+GET     /*view                              controllers.Application.angular(view)
