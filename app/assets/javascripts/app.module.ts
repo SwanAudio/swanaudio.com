@@ -8,14 +8,19 @@ import { RoutingModule } from './routing.module'
 
 /* Components */
 import { AppComponent }             from './components/swanaudio.component'
+import { ContactComponent }         from './components/contact.component'
 import { RecentTweetsComponent }    from './components/recent-tweets.component'
 import { RecentInstagramComponent } from './components/recent-instagram.component'
+import { PrivacyComponent }         from './components/privacy.component'
 import { ProductsComponent }        from './components/products.component'
 import { NewsComponent }            from './components/news.component'
 import { ServicesComponent }        from './components/services.component'
 import { LandingComponent }         from './components/landing.component'
+import { TermsComponent }           from './components/terms.component'
 
 /* Services */
+import { InstagramService }         from './services/instagram.service'
+import { ProductService }           from './services/product.service'
 import { TwitterService }           from './services/twitter.service'
 
 @NgModule({
@@ -27,14 +32,19 @@ import { TwitterService }           from './services/twitter.service'
   ],
   declarations: [
     AppComponent,
+    ContactComponent,
     RecentTweetsComponent,
     RecentInstagramComponent,
     LandingComponent,
     ProductsComponent,
     NewsComponent,
     ServicesComponent,
+    PrivacyComponent,
+    TermsComponent,
   ],
   providers: [
+    InstagramService,
+    ProductService,
     TwitterService,
   ],
   bootstrap: [ AppComponent ],

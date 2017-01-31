@@ -9,6 +9,7 @@ GET     /                                   controllers.Application.index
 # Angular API's
 # ~~~~
 GET     /api/twitter/timeline               controllers.Twitter.timeline
+GET     /api/products/list                  controllers.Products.list
 
 # STATIC ROUTES
 # ~~~~
