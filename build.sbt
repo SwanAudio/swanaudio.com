@@ -12,6 +12,7 @@ libraryDependencies ++= {
   Seq(
     ws,
     cache,
+    filters,
 
     "org.webjars.npm" % "angular__common" % ngVersion,
     "org.webjars.npm" % "angular__compiler" % ngVersion,
