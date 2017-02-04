@@ -1,4 +1,5 @@
 @require '_colors'
+@require '_animations'
 
 html, body
   height: 100%
@@ -12,16 +13,17 @@ body
 a
   color: font-light
   text-decoration: none
+  transition: ease-out 200ms all
 
   &:hover
     color: accent
-    text-decoration: underline
+    text-decoration: none
 
 h1, h2, h3, h4, h5
-  text-transform: uppercase
+  text-transform: capitalize
 
 a
-  text-transform: uppercase
+  text-transform: capitalize
 
 h5
   font-size: 1.3em
@@ -49,8 +51,69 @@ swanaudio
   border-radius: 3px
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12)
 
+.panel-2
+  @extend .panel-1
+
+  &>h2
+    position: relative
+    margin: 0 0 .83em
+    padding: 3vh 0
+    color: font-light
+    background: linear-gradient(
+      rgba(dark-primary, .80),
+      rgba(dark-primary, .80)
+    ), url('/assets/bg-alt-1.jpg') no-repeat center center
+    background-size: cover
+.panel-3
+  @extend .panel-1
+
+  &>h2
+    position: relative
+    margin: 0 0 .83em
+    padding: 3vh 0
+    color: font-light
+    background: linear-gradient(
+      rgba(dark-primary, .80),
+      rgba(dark-primary, .80)
+    ), url('/assets/bg-alt-2.jpg') no-repeat center center
+    background-size: cover
+.panel-4
+  @extend .panel-1
+
+  &>h2
+    position: relative
+    margin: 0 0 .83em
+    padding: 3vh 0
+    color: font-light
+    background: linear-gradient(
+      rgba(dark-primary, .80),
+      rgba(dark-primary, .80)
+    ), url('/assets/bg-alt-3.jpg') no-repeat center center
+    background-size: cover
+
 .flex
   flex: 1 0 auto
+
+.btn-primary
+  background: accent
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12)
+  color: font-light-secondary
+  border-radius: 2px
+  padding: 8px 26px 8px 30px
+  margin: 10px 1px
+  cursor: pointer
+  display: block
+
+  .fa-long-arrow-right
+    margin-left: 4px
+    transition: linear 350ms transform
+
+  &:hover
+    color: @color
+    background: lighten(@background, 4%)
+
+  &:hover .fa-long-arrow-right
+    transform: translateX(10px)
 
 ul.inline-list
   display: flex
@@ -61,3 +124,45 @@ ul.inline-list
   &>li
     flex: 1 0 0
     padding: 0 10px
+
+nav.subnav
+  background: accent
+  box-shadow: 0 3px 3px rgba(0,0,0,.21)
+  text-align: center
+  overflow: hidden
+
+  &>ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+    &>li
+      display: inline-block
+      animation-name: slide-down
+      animation-duration: 350ms
+      animation-delay: 0s
+      animation-iteration-count: 1
+      animation-timing-function: ease
+      transition: 300ms ease-out background
+
+      &:hover
+        background: bg-4
+
+      &>a
+        padding: 6px 18px 6px 6px
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        color: white
+        //color: font-primary
+
+      img
+        height: 36px
+        margin-right: 4px
+
+      span
+        font-size: 11px

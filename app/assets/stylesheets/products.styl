@@ -1,46 +1,6 @@
-@require '_animations'
 @require '_colors'
 
-nav
-  background: bg-3
-  padding: 12px 0px 13px 0px
-  text-align: center
-  overflow: hidden
-
-  &>ul
-    list-style: none
-    margin: 0
-    padding: 0
-    display: flex
-    flex-direction: row
-    justify-content: center
-
-    &>li
-      display: inline-block
-      padding: 0px 18px
-      animation-name: slide-down
-      animation-duration: 350ms
-      animation-delay: 0s
-      animation-iteration-count: 1
-      animation-timing-function: ease
-
-      &>a
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        color: font-primary
-
-      img
-        height: 52px
-        width: 54px
-        margin: 0 7px 6px
-
-      span
-        font-size: 11px
-
 article
-  background: rgba(bg-1, .87)
   padding: 37px 5vw
   display: flex
   flex-wrap: wrap

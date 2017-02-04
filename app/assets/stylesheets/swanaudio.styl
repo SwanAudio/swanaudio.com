@@ -1,26 +1,32 @@
 @import '_colors'
 
 header
-  background: bg-5
+  background: bg-4
   display: flex
   flex: 0 0 auto
   flex-direction: row
-  align-items: center
+  align-items: flex-end
 
   &>a>img
-    height: 55px
+    height: 75px
     margin: 0 10px
 
   &>aside
     padding: 0 30px
 
-  &>nav, &>aside
     &>a
       display: inline-block
-      padding: 15px 10px 0px
+      padding: 10px
+
+  &>nav>a
+    display: inline-block
+    padding: 10px 20px
+
+  &>nav>a+a
+    border-left: 1px solid border-light
 
   &>nav>a.active
-    color: accent
+    border-bottom: 2px solid accent
 
 main
   display: flex
@@ -44,7 +50,8 @@ main
     padding: 97px 20px
 
 footer
-  background: bg-4
+  background: bg-5
+  box-shadow: inset 0px 3px 3px rgba(0,0,0,0.14)
   color: font-light
   padding: 10px 0
   display: flex

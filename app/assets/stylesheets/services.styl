@@ -1,4 +1,23 @@
 @require '_colors'
 
-section
-  padding: 97px 20px
+article
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  padding: 37px 5vw
+
+  &>h2
+    flex: 1 0 100%
+    margin-top: 0
+
+  &>section
+    flex: 1 0 0
+
+    &>h2
+      text-align: center
+
+    &>p
+      padding: 20px
+
+  section+section
+    margin-left: 2vw

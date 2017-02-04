@@ -1,20 +1,41 @@
 @require '_colors'
 
 .feature
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
   flex: 1 0 auto
   background: url('/assets/bg_tube.jpg') no-repeat center center
   background-size: cover
   min-height: 350px
-  padding: 10vh 5vw
+  padding: 11vh 4vw 10vh
+
+  h1
+    color: font-light
+    font-size: 2em
+    font-weight: 200
+    margin: 0 0 10px
+
+  h2
+    color: font-light-secondary
+    font-size: 1.5em
+    font-weight: 300
+    margin:  0 0 10px
+
+  h1, h2
+    text-shadow: 0 1px 2px rgba(0,0,0,.6)
 
 .accents
   display: flex
   flex-direction: row
+  padding: 0 2vw
 
   @media (max-width: 500px)
     flex-direction: column
 
   &>div, form
     flex: 1 1 0
-    padding: 20px
+    margin: 1vw 2vw
     text-align: center
+    padding-bottom: 20px
