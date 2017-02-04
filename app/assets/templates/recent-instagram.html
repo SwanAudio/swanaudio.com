@@ -1,13 +1,8 @@
 <h5>Instagram</h5>
 <ul>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
-  <li><a href><img src=''></a></li>
+  <li *ngFor='let image of images'>
+    <a href='{{ image.link }}' target='_blank'>
+      <img src='{{ image.images.low_resolution.url }}' alt='{{ image.caption.text }}'>
+    </a>
+  </li>
 </ul>
