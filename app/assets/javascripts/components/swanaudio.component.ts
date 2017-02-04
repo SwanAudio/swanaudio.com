@@ -32,9 +32,9 @@ export class AppComponent implements OnInit {
       .mergeMap(route => route.data)
       .subscribe(evt => {
         let title = 'Swan Audio'
-        if (evt.title) {
+        if ((evt as any).title) {
           title += ' | '
-          title += evt.title
+          title += (evt as any).title
         }
         this.titleService.setTitle(title)
       })
