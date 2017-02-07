@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'landing',
   templateUrl: 'assets/templates/landing.html',
   styleUrls: [ 'assets/stylesheets/landing.min.css' ],
 })
-export class LandingComponent {} // implements OnInit
+export class LandingComponent {}
