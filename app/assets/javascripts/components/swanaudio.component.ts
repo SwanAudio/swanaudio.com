@@ -45,7 +45,4 @@ export class AppComponent implements OnInit {
       })
   }
 
-  public toggleState() {
-    this.menuState = this.menuState === 'inactive' ? 'active' : 'inactive'
-  }
 }
