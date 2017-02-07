@@ -5,28 +5,104 @@ header
   display: flex
   flex: 0 0 auto
   flex-direction: row
-  align-items: flex-end
+  max-height: 70px
+  transition: 1000ms ease-in max-height
 
   &>a>img
-    height: 75px
-    margin: 0 10px
+    height: 85px
+    margin: -10px 10px
+
+  &>nav
+    display: flex
+    align-items: flex-end
+    flex: 1 0 0
 
   &>aside
-    padding: 0 30px
+    display: flex
+    align-items: flex-end
+    flex-direction: row
+    padding-right: 2vw
 
     &>a
+      flex: 1 0 0
       display: inline-block
       padding: 10px
 
   &>nav>a
     display: inline-block
-    padding: 10px 20px
+    padding: 10px 1.5vw
 
   &>nav>a+a
     border-left: 1px solid border-light
 
   &>nav>a.active
     border-bottom: 2px solid accent
+
+.mobile-toggle
+  display: none
+  padding-right: 1rem
+
+  &>i
+    font-size: 2rem
+
+@media (max-width: 500px)
+  header>a.mobile-toggle
+    flex: 1 0 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+
+  .copyright
+    padding: 20px 0 10px
+
+  header
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    z-index: 10
+
+  .active-menu
+    max-height: 1000px
+
+  .active-menu>nav, .active-menu>aside
+    display: flex
+
+  header>nav, header>aside
+    display: none
+    flex: 1 0 100%
+
+  aside>a
+    animation: slide-down
+    animation-duration: 250ms
+    animation-fill-mode: forwards
+    opacity: 0
+
+    for $i in 1..4
+      &:nth-child({$i})
+        animation-delay: 150ms * $i
+
+  header>nav
+    align-items: center
+    flex-direction: column
+
+    &>a
+      width: 100%
+      text-align: center
+      border-left: none !important // Overriding a+a specificity
+      border-bottom: 1px solid border-light
+      opacity: 0
+      animation: slide-left
+      animation-duration: 350ms
+      animation-fill-mode: forwards
+
+      for $i in 1..4
+        &:nth-child({$i})
+          animation-delay: 200ms * $i
+
+  header>aside
+    align-items: space-around
+    text-align: center
 
 main
   display: flex
@@ -53,7 +129,6 @@ footer
   background: bg-5
   box-shadow: inset 0px 3px 3px rgba(0,0,0,0.14)
   color: font-light
-  padding: 10px 0
   display: flex
   flex: 0 0 auto
   flex-direction: column
@@ -66,7 +141,7 @@ footer
     border-top: 1px solid border-light
     width: 100%
     max-width: 1440px
-    margin: 20px auto
+    margin: 10px auto
 
   &>div
     display: flex
@@ -74,9 +149,11 @@ footer
     width: 100%
     max-width: 1440px
     margin: 0 auto
+    padding: 10px 0
 
     @media (max-width: 500px)
       flex-direction: column
+      text-align: center
 
     section, recent-tweets, recent-instagram
       display: block

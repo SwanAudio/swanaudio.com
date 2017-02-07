@@ -1,13 +1,15 @@
-<header>
+<header role='banner' [class.active-menu]='menuState'>
   <a routerLink='/'>
     <img src='assets/swan-audio-logo-final-alt.svg' alt='Swan Audio'>
   </a>
-  <nav>
+  <a class='mobile-toggle' (click)='menuState = !menuState'>
+    <i class='fa fa-bars'></i>
+  </a>
+  <nav role='navigation'>
     <a routerLink='/services' routerLinkActive='active'>Services</a>
     <a routerLink='/products' routerLinkActive='active'>Products</a>
     <a routerLink='/contact' routerLinkActive='active'>Contact</a>
   </nav>
-  <span class='flex'></span>
   <aside>
     <a target='_blank' href='https://twitter.com/swanaudio'><i class='fa fa-twitter'></i></a>
     <a target='_blank' href='https://www.facebook.com/swanaudioca'><i class='fa fa-facebook'></i></a>
@@ -18,7 +20,7 @@
 <main role='main'>
   <router-outlet></router-outlet>
 </main>
-<footer>
+<footer role='contentinfo'>
   <div>
     <section>
       <h5>About Us</h5>
@@ -39,6 +41,6 @@
 
     <span class='flex'></span>
 
-    <span>Swan Audio Inc. &copy; 2017</span>
+    <span class='copyright'>Swan Audio Inc. &copy; 2017</span>
   </div>
 </footer>

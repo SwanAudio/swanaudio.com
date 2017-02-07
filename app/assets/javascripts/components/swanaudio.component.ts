@@ -2,7 +2,7 @@ import 'rxjs/add/operator/filter'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/mergeMap'
 
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, trigger, state, transition, animate, style } from '@angular/core'
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router'
 import { Title } from '@angular/platform-browser'
 
@@ -12,11 +12,16 @@ import { Title } from '@angular/platform-browser'
   styleUrls: [ 'assets/stylesheets/swanaudio.min.css' ],
 })
 export class AppComponent implements OnInit {
+
+  public menuState: boolean
+
   public constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
-  ) {}
+  ) {
+    this.menuState = false
+  }
 
   public ngOnInit() {
     this.router.events
@@ -40,4 +45,7 @@ export class AppComponent implements OnInit {
       })
   }
 
+  public toggleState() {
+    this.menuState = this.menuState === 'inactive' ? 'active' : 'inactive'
+  }
 }

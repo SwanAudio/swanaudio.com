@@ -7,7 +7,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.11.8"
 
 libraryDependencies ++= {
-  val ngVersion = "2.4.4"
+  val ngVersion = "2.4.6"
 
   Seq(
     ws,
