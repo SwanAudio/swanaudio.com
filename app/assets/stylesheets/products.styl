@@ -6,23 +6,29 @@ article
   flex-wrap: wrap
   flex-direction: row
 
-  &>h2
-    flex: 1 0 50%
+  &>h2, &>p
     margin-top: 0
+    margin-bottom: 1rem
+    flex: 1 0 auto
+    width: 50%
+
+    @media (max-width: 500px)
+      width: 100%
 
   &>p
-    flex: 1 0 50%
-    margin: 0
     color: font-muted
     font-size: 18px
     letter-spacing: 0.1em
     text-align: right
 
+    @media (max-width: 500px)
+      width: 100%
+
   h3
     margin-top: 0
 
   &>aside
-    flex: 0 1 20%
+    flex: 1 0 0
 
     section+section
       margin-top: 20px
@@ -31,8 +37,11 @@ article
     padding: 20px
 
   &>section
-    flex: 1 0 0
+    flex: 4 0 0
     margin-left: 2vw
+
+    @media (max-width: 500px)
+      margin: 20px 0
 
   dl
     display: flex
