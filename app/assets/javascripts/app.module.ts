@@ -13,7 +13,7 @@ import { RecentTweetsComponent }    from './components/recent-tweets.component'
 import { RecentInstagramComponent } from './components/recent-instagram.component'
 import { PrivacyComponent }         from './components/privacy.component'
 import { ProductsComponent }        from './components/products.component'
-import { NewsComponent }            from './components/news.component'
+import { NewsletterSignupComponent} from './components/newsletter-signup.component'
 import { ServicesComponent }        from './components/services.component'
 import { LandingComponent }         from './components/landing.component'
 import { TermsComponent }           from './components/terms.component'
@@ -37,7 +37,7 @@ import { TwitterService }           from './services/twitter.service'
     RecentInstagramComponent,
     LandingComponent,
     ProductsComponent,
-    NewsComponent,
+    NewsletterSignupComponent,
     ServicesComponent,
     PrivacyComponent,
     TermsComponent,
