@@ -1,6 +1,16 @@
 @require '_colors'
 @require '_animations'
 
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}
+
 html, body
   height: 100%
 
@@ -25,11 +35,30 @@ h1, h2, h3, h4, h5
 a
   text-transform: capitalize
 
+h1
+  margin: 0 0 .5rem
+
 h5
   font-size: 1.3em
   font-weight: 700
   line-height: 1.4em
   margin-bottom: 10px
+
+input[type='text'], input[type='email'], textarea
+  padding: 5px
+  border: 1px solid border-dark
+  color: font-primary
+
+  +placeholder()
+    color: font-muted
+
+button[type='submit']
+  background: accent
+  color: font-light
+  border: 0
+  border-radius: 2px
+  padding: .5rem
+  font-size: 13px
 
 swanaudio
   display: flex
