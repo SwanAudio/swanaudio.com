@@ -17,9 +17,9 @@ export class ProductService {
       .catch(this.handleError)
   }
 
-  public getProduct(id: number): Promise<Product> {
+  public getProduct(slug: string): Promise<Product> {
     return this.getProducts()
-      .then(products => products.find(product => product.id === id))
+      .then(products => products.find(product => product.slug === slug))
   }
 
   private handleError(error: any): Promise<any> {

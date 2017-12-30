@@ -1,48 +1,59 @@
 @require '_colors'
+@require '_functions'
 @require '_animations'
 
-placeholder()
-  &::-webkit-input-placeholder
-    {block}
-  &:-moz-placeholder
-    {block}
-  &::-moz-placeholder
-    {block}
-  &:-ms-input-placeholder
-    {block}
+*
+  box-sizing: border-box
 
 html, body
   height: 100%
 
 body
-  color: font-primary
   background: bg-1
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 14px
+  font: normal 14px/1.5rem 'Montserrat', sans-serif
+  color: font-primary
+
+swanaudio
+  display: flex
+  flex-direction: column
+  height: 100%
+
+
+/* Links
+  ---------------------------------------------------------------- */
 
 a
   color: font-light
   text-decoration: none
   transition: ease-out 200ms all
+  text-transform: capitalize
 
   &:hover
     color: accent
     text-decoration: none
 
-h1, h2, h3, h4, h5
-  text-transform: capitalize
 
-a
+/* Text-level
+  ---------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5
   text-transform: capitalize
 
 h1
   margin: 0 0 .5rem
+
+  strong
+    color: accent
 
 h5
   font-size: 1.3em
   font-weight: 700
   line-height: 1.4em
   margin: 1rem 0
+
+
+/* Form
+  ---------------------------------------------------------------- */
 
 input[type='text'], input[type='email'], textarea
   padding: 5px
@@ -60,10 +71,9 @@ button[type='submit']
   padding: .5rem
   font-size: 13px
 
-swanaudio
-  display: flex
-  flex-direction: column
-  height: 100%
+/* Helpers
+  ---------------------------------------------------------------- */
+
 
 .bg-1
   background: rgba(bg-1, .87)
@@ -74,51 +84,14 @@ swanaudio
 .bg-3
   background: rgba(bg-3, .87)
 
-.panel-1
-  background: bg-2
-  border-bottom: 3px solid accent
-  border-radius: 3px
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12)
+.panel-1, .panel-2
+  panel(bg-2, accent)
 
-.panel-2
-  @extend .panel-1
-
-  h2
-    position: relative
-    margin: 0 0 .83em
-    padding: 3vh 0
-    color: font-light
-    background: linear-gradient(
-      rgba(dark-primary, .80),
-      rgba(dark-primary, .80)
-    ), url('/assets/bg-alt-1.jpg') no-repeat center center
-    background-size: cover
 .panel-3
-  @extend .panel-1
+  panel(bg-2, accent, '/assets/bg-alt-2.jpg')
 
-  h2
-    position: relative
-    margin: 0 0 .83em
-    padding: 3vh 0
-    color: font-light
-    background: linear-gradient(
-      rgba(dark-primary, .80),
-      rgba(dark-primary, .80)
-    ), url('/assets/bg-alt-2.jpg') no-repeat center center
-    background-size: cover
 .panel-4
-  @extend .panel-1
-
-  h2
-    position: relative
-    margin: 0 0 .83em
-    padding: 3vh 0
-    color: font-light
-    background: linear-gradient(
-      rgba(dark-primary, .80),
-      rgba(dark-primary, .80)
-    ), url('/assets/bg-alt-3.jpg') no-repeat center center
-    background-size: cover
+  panel(bg-2, accent, '/assets/bg-alt-3.jpg')
 
 .flex
   flex: 1 0 auto
@@ -155,7 +128,7 @@ ul.inline-list
     padding: 0 10px
 
 nav.subnav
-  background: accent
+  background: bg-3
   box-shadow: 0 3px 3px rgba(0,0,0,.21)
   text-align: center
   overflow: hidden
@@ -186,8 +159,7 @@ nav.subnav
         flex-direction: row
         justify-content: center
         align-items: center
-        color: white
-        //color: font-primary
+        color: font-primary
 
       img
         height: 36px

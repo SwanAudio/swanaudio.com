@@ -1,10 +1,12 @@
-import 'rxjs/add/operator/filter'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/mergeMap'
-
 import { Component, OnInit, trigger, state, transition, animate, style } from '@angular/core'
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router'
 import { Title } from '@angular/platform-browser'
+
+import { Angulartics2GoogleAnalytics } from 'angulartics2'
+
+import 'rxjs/add/operator/filter'
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/mergeMap'
 
 @Component({
   selector: 'swanaudio',
@@ -19,6 +21,7 @@ export class AppComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
+    private analytics: Angulartics2GoogleAnalytics,
   ) {
     this.menuState = false
   }

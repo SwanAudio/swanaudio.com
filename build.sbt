@@ -2,18 +2,27 @@ name := "swanaudio"
 
 version := "1.0-SNAPSHOT"
 
+incOptions := incOptions.value.withNameHashing(true)
+updateOptions := updateOptions.value.withCachedResolution(cachedResoluton = true)
+
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.8"
 
 libraryDependencies ++= {
-  val ngVersion = "2.4.6"
+  val ngVersion = "2.4.7"
+  val circeVersion = "0.7.0"
 
   Seq(
     ws,
     cache,
     filters,
 
+    "io.circe" %% "circe-core" % circeVersion,
+    "io.circe" %% "circe-generic" % circeVersion,
+    "io.circe" %% "circe-parser" % circeVersion,
+
+    // Angular 2 framework
     "org.webjars.npm" % "angular__common" % ngVersion,
     "org.webjars.npm" % "angular__compiler" % ngVersion,
     "org.webjars.npm" % "angular__core" % ngVersion,
@@ -22,18 +31,20 @@ libraryDependencies ++= {
     "org.webjars.npm" % "angular__router" % "3.4.4",
     "org.webjars.npm" % "angular__platform-browser-dynamic" % ngVersion,
     "org.webjars.npm" % "angular__platform-browser" % ngVersion,
-    "org.webjars.npm" % "systemjs" % "0.19.40",
-    "org.webjars.npm" % "rxjs" % "5.0.0-beta.12",
-    "org.webjars.npm" % "reflect-metadata" % "0.1.8",
-    "org.webjars.npm" % "zone.js" % "0.6.26",
+    "org.webjars.npm" % "rxjs" % "5.0.1",
+    "org.webjars.npm" % "zone.js" % "0.8.1",
     "org.webjars.npm" % "core-js" % "2.4.1",
-    "org.webjars.npm" % "symbol-observable" % "1.0.1",
 
+    // SystemJS
+    "org.webjars.npm" % "systemjs" % "0.19.40",
+
+    // Typescript
     "org.webjars.npm" % "typescript" % "2.1.4",
-
-    //tslint dependency
     "org.webjars.npm" % "tslint-eslint-rules" % "3.1.0",
     "org.webjars.npm" % "tslint-microsoft-contrib" % "2.0.12",
+
+    // Libraries
+    "org.webjars.npm" % "angulartics2" % "1.6.3",
 
     // CSS
     "org.webjars.npm" % "normalize.css" % "4.2.0"

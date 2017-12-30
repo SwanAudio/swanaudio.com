@@ -6,13 +6,19 @@ import { HttpModule }    from '@angular/http'
 /* Routing */
 import { RoutingModule } from './routing.module'
 
+/* Analytics */
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2'
+
 /* Components */
+import { AboutComponent }           from './components/about.component'
 import { AppComponent }             from './components/swanaudio.component'
 import { ContactComponent }         from './components/contact.component'
 import { RecentTweetsComponent }    from './components/recent-tweets.component'
 import { RecentInstagramComponent } from './components/recent-instagram.component'
 import { PrivacyComponent }         from './components/privacy.component'
-import { ProductsComponent }        from './components/products.component'
+import { ProductNavComponent }      from './components/product-nav.component'
+import { ProductDetailComponent }   from './components/product-detail.component'
+import { ProductListComponent }     from './components/product-list.component'
 import { NewsletterSignupComponent} from './components/newsletter-signup.component'
 import { ServicesComponent }        from './components/services.component'
 import { LandingComponent }         from './components/landing.component'
@@ -29,14 +35,18 @@ import { TwitterService }           from './services/twitter.service'
     FormsModule,
     HttpModule,
     RoutingModule,
+    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
   ],
   declarations: [
+    AboutComponent,
     AppComponent,
     ContactComponent,
     RecentTweetsComponent,
     RecentInstagramComponent,
     LandingComponent,
-    ProductsComponent,
+    ProductNavComponent,
+    ProductDetailComponent,
+    ProductListComponent,
     NewsletterSignupComponent,
     ServicesComponent,
     PrivacyComponent,

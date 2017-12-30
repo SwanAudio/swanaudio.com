@@ -12,6 +12,8 @@ case class ProductSpecification(
 case class Product(
   id: Int,
   name: String,
+  slug: String,
+  icon: String,
   description: String,
   tagline: String,
   features: Seq[String],

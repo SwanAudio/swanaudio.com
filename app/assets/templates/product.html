@@ -1,34 +1,19 @@
-<nav class='subnav'>
-  <ul>
-    <li>
-      <a [routerLink]="[{outlets: { product: ['cable'] } }]">
-        <img src='assets/cable-plug.svg'>
-        <span>Instrument Cable</span>
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="[{outlets: { product: ['mic'] } }]">
-        <img src='assets/cable-xlr.svg'>
-        <span>Microphone Cable</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<h1><a routerLink='/products'>Products</a> &gt; {{ product.name }}</h1>
+
+<product-nav></product-nav>
 
 <article>
-  <h2>Instrument Cable</h2>
-  <p>Witty Quote Man</p>
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.tagline }}</p>
 
   <aside>
     <section class='panel-1'>
       <h3>Specifications</h3>
       <dl>
-        <dt><span>Spec 1</span></dt>
-        <dd><span>Value</span></dd>
-        <dt><span>Spec 2</span></dt>
-        <dd><span>Value</span></dd>
-        <dt><span>Spec 3</span></dt>
-        <dd><span>Value</span></dd>
+        <template ngFor let-spec [ngForOf]='product.specifications'>
+          <dt><span>{{ spec.name }}</span></dt>
+          <dd><span>{{ spec.value }}</span></dd>
+        </template>
       </dl>
     </section>
 
@@ -48,10 +33,7 @@
     <!-- product features -->
     <h3>Features</h3>
     <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-      <li>Feature 4</li>
+      <li *ngFor='let feature of product.features'>{{feature}}</li>
     </ul>
 
     <!-- product video / audio / additional images -->
