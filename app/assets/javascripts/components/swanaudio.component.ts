@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
-    private analytics: Angulartics2GoogleAnalytics,
+    //private analytics: Angulartics2GoogleAnalytics,
   ) {
     this.menuState = false
   }

@@ -10,10 +10,10 @@
     <section class='panel-1'>
       <h3>Specifications</h3>
       <dl>
-        <template ngFor let-spec [ngForOf]='product.specifications'>
+        <ng-template ngFor let-spec [ngForOf]='product.specifications'>
           <dt><span>{{ spec.name }}</span></dt>
           <dd><span>{{ spec.value }}</span></dd>
-        </template>
+        </ng-template>
       </dl>
     </section>
 

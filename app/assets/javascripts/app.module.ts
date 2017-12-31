@@ -35,7 +35,7 @@ import { TwitterService }           from './services/twitter.service'
     FormsModule,
     HttpModule,
     RoutingModule,
-    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+    //Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
   ],
   declarations: [
     AboutComponent,

@@ -2,18 +2,20 @@ var map = {
   'app': 'assets/javascripts',
   '@angular':'assets/lib/@angular',
   'rxjs':'assets/lib/rxjs',
-  'angulartics2': 'assets/lib/angulartics2/dist/index',
-  'symbol-observable': 'assets/lib/symbol-observable'
+  'angulartics2': 'assets/lib/angulartics2/bundles/core.umd',
+  'angulartics2googleanalytics': 'assets/lib/angulartics2/bundles/ga.umd',
+  //'symbol-observable': 'assets/lib/symbol-observable'
 };
 
 var packages = {
   'app': {main: 'main.js', defaultExtension: 'js'},
   'rxjs': {defaultExtension: 'js'},
   'assets/lib': {defaultExtension: 'js'},
-  'symbol-observable': {defaultExtension: 'js', main: 'index.js'},
+  //'symbol-observable': {defaultExtension: 'js', main: 'index.js'},
 };
 
 var ngPackageNames = [
+  'animations',
   'common',
   'compiler',
   'core',
