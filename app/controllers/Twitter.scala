@@ -26,7 +26,7 @@ class Twitter @Inject() (
     Action.async { implicit request =>
       getToken(authUrl, client, secret) flatMap { token =>
         ws.url(timelineUrl)
-          .withHeaders("Authorization" -> s"Bearer ${token getOrElse ""}")
+          .addHttpHeaders("Authorization" -> s"Bearer ${token getOrElse ""}")
           .get
           .map(response => Ok(response.body))
       }
