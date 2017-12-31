@@ -11,7 +11,7 @@ scalaVersion := "2.12.4"
 
 libraryDependencies ++= {
   val ngVersion = "2.4.7"
-  val circeVersion = "0.7.0"
+  val circeVersion = "0.8.0"
 
   Seq(
     ws,
@@ -40,9 +40,9 @@ libraryDependencies ++= {
     "org.webjars.npm" % "systemjs" % "0.19.40",
 
     // Typescript
-    "org.webjars.npm" % "typescript" % "2.1.4",
-    "org.webjars.npm" % "tslint-eslint-rules" % "3.1.0",
-    "org.webjars.npm" % "tslint-microsoft-contrib" % "2.0.12",
+    "org.webjars.npm" % "typescript" % "2.4.1",
+    "org.webjars.npm" % "tslint-eslint-rules" % "3.4.0",
+    "org.webjars.npm" % "tslint-microsoft-contrib" % "4.0.0",
 
     // Libraries
     "org.webjars.npm" % "angulartics2" % "1.6.3",
