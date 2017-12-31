@@ -5,7 +5,7 @@ import javax.inject.Inject
 import scala.concurrent.ExecutionContext
 
 import play.api.cache.Cached
-import play.api.mvc.{Action,Controller}
+import play.api.mvc.{Action,InjectedController}
 
 import io.circe.generic.auto._
 import io.circe.syntax._
@@ -15,7 +15,7 @@ import models.{Product, ProductSpecification}
 class Products @Inject() (
   cached: Cached,
   implicit val context: ExecutionContext
-) extends Controller {
+) extends InjectedController {
 
   def list = Action {
     val products: Seq[Product] = Seq(

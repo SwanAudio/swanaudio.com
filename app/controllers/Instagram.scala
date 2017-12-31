@@ -8,7 +8,7 @@ import play.Configuration
 import play.api.cache.Cached
 import play.api.libs.ws.WSClient
 import play.api.libs.json._
-import play.api.mvc.{Action,Controller}
+import play.api.mvc.{Action,InjectedController}
 
 
 class Instagram @Inject() (
@@ -16,7 +16,7 @@ class Instagram @Inject() (
   config: Configuration,
   implicit val context: ExecutionContext,
   override val ws: WSClient
-) extends Controller with utils.OAuth2 {
+) extends InjectedController with utils.OAuth2 {
 
   val recentUrl = "https://www.instagram.com/swan.audio/media/"
 

@@ -3,10 +3,9 @@ package controllers
 import javax.inject.Inject
 
 import play.api.cache.Cached
-import play.api.mvc.Action
-import play.api.mvc.Controller
+import play.api.mvc.{Action,InjectedController}
 
-class Application @Inject() (cached: Cached) extends Controller {
+class Application @Inject() (cached: Cached) extends InjectedController {
 
   def index = Action {
     Ok(views.html.main())

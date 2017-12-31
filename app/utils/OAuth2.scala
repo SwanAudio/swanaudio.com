@@ -5,7 +5,7 @@ import java.util.Base64
 
 import scala.concurrent.{ExecutionContext,Future}
 
-import play.api.libs.ws.WSClient
+import play.api.libs.ws.{EmptyBody,WSClient}
 import play.api.mvc.Results
 
 
@@ -20,12 +20,12 @@ trait OAuth2 {
       .encodeToString(s"$client:$secret".getBytes(StandardCharsets.UTF_8))
 
     ws.url(endpoint)
-      .withQueryString("grant_type" -> "client_credentials")
-      .withHeaders(
+      .addQueryStringParameters("grant_type" -> "client_credentials")
+      .addHttpHeaders(
         "Authorization" -> s"Basic $credentials",
         "Content-Type" -> "application/x-www-form-urlencoded;charset=UTF-8"
       )
-      .post(Results.EmptyContent())
+      .post(EmptyBody)
       .map(response => (response.json \ "access_token").asOpt[String])
   }
 

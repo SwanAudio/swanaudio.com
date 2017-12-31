@@ -4,10 +4,10 @@ import javax.inject.Inject
 
 import scala.concurrent.ExecutionContext
 
-import play.Configuration
+import play.api.Configuration
 import play.api.cache.Cached
 import play.api.libs.ws.WSClient
-import play.api.mvc.{Action,Controller}
+import play.api.mvc.{Action,InjectedController}
 
 
 class Twitter @Inject() (
@@ -15,12 +15,12 @@ class Twitter @Inject() (
   config: Configuration,
   implicit val context: ExecutionContext,
   override val ws: WSClient
-) extends Controller with utils.OAuth2 {
+) extends InjectedController with utils.OAuth2 {
 
   val authUrl = "https://api.twitter.com/oauth2/token"
   val timelineUrl = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=swanaudio&count=2"
-  val client = config.getString("twitter.oauth.client")
-  val secret = config.getString("twitter.oauth.secret")
+  val client = config.get[String]("twitter.oauth.client")
+  val secret = config.get[String]("twitter.oauth.secret")
 
   def timeline = cached(_ => "twitter-timeline", duration=900) {
     Action.async { implicit request =>

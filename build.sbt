@@ -7,7 +7,7 @@ updateOptions := updateOptions.value.withCachedResolution(cachedResoluton = true
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.4"
 
 libraryDependencies ++= {
   val ngVersion = "2.4.7"
@@ -17,6 +17,7 @@ libraryDependencies ++= {
     ws,
     cache,
     filters,
+    guice,
 
     "io.circe" %% "circe-core" % circeVersion,
     "io.circe" %% "circe-generic" % circeVersion,
