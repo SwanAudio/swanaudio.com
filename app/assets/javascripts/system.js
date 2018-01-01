@@ -3,15 +3,13 @@ var map = {
   '@angular':'assets/lib/@angular',
   'rxjs':'assets/lib/rxjs',
   'angulartics2': 'assets/lib/angulartics2/bundles/core.umd',
-  'angulartics2googleanalytics': 'assets/lib/angulartics2/bundles/ga.umd',
-  //'symbol-observable': 'assets/lib/symbol-observable'
+  'angulartics2/ga': 'assets/lib/angulartics2/bundles/ga.umd',
 };
 
 var packages = {
   'app': {main: 'main.js', defaultExtension: 'js'},
   'rxjs': {defaultExtension: 'js'},
   'assets/lib': {defaultExtension: 'js'},
-  //'symbol-observable': {defaultExtension: 'js', main: 'index.js'},
 };
 
 var ngPackageNames = [

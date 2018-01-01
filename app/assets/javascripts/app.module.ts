@@ -7,7 +7,8 @@ import { HttpModule }    from '@angular/http'
 import { RoutingModule } from './routing.module'
 
 /* Analytics */
-import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2'
+import { Angulartics2Module } from 'angulartics2'
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
 
 /* Components */
 import { AboutComponent }           from './components/about.component'
@@ -35,7 +36,7 @@ import { TwitterService }           from './services/twitter.service'
     FormsModule,
     HttpModule,
     RoutingModule,
-    //Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
   ],
   declarations: [
     AboutComponent,

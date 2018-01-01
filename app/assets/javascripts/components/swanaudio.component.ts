@@ -2,7 +2,7 @@ import { Component, OnInit, trigger, state, transition, animate, style } from '@
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router'
 import { Title } from '@angular/platform-browser'
 
-import { Angulartics2GoogleAnalytics } from 'angulartics2'
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga'
 
 import 'rxjs/add/operator/filter'
 import 'rxjs/add/operator/map'
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
-    //private analytics: Angulartics2GoogleAnalytics,
+    private analytics: Angulartics2GoogleAnalytics,
   ) {
     this.menuState = false
   }
