@@ -5,7 +5,7 @@ version := "1.0-SNAPSHOT"
 incOptions := incOptions.value.withNameHashing(true)
 updateOptions := updateOptions.value.withCachedResolution(cachedResoluton = true)
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file(".")).enablePlugins(PlayScala, PlayAkkaHttp2Support)
 
 scalaVersion := "2.12.4"
 
