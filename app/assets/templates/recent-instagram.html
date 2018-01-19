@@ -1,7 +1,7 @@
 <h5>Instagram</h5>
 <ul>
   <li *ngFor='let image of images'>
-    <a href='{{ "//instagram.com/p/" + image.node.shortcode }}' target='_blank'>
+    <a href='{{ "//instagram.com/p/" + image.node.shortcode }}' target='_blank' rel="noopener noreferrer">
       <img src='{{ image.node.thumbnail_src }}' alt='{{ image.node.edge_media_to_caption.edges[0].node.text }}'>
     </a>
   </li>
