@@ -16,6 +16,6 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.2.0-M8")
 addSbtPlugin("name.de-vries" % "sbt-typescript" % "2.5.2-1")
 
 // Stylus
-addSbtPlugin("com.typesafe.sbt" % "sbt-stylus" % "1.0.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-stylus" % "1.1.0")
 
 addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.3.3")
