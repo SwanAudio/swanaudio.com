@@ -1,13 +1,11 @@
-version: '2.1'
+version: '3.5'
 services:
-  ##
-  # Main application image.
-  # Mounts the local code and provides access to SBT.
-  web:
+  swanaudio:
     image: pitchplay/scala-dev:jdk8-web
     command: '~run'
     volumes:
-        - .:/usr/src/app
-        - /root/.ivy2
+      - .:/usr/src/app
+      - /root/.ivy2
     ports:
+      - "9443:9443"
       - "9000:9000"

@@ -1,0 +1,10 @@
+target/
+project/target/
+project/project/
+logs/
+
+README.md
+
+Dockerfile
+docker-compose.yml
+Jenkinsfile

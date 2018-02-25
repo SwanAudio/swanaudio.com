@@ -2,7 +2,6 @@ name := "swanaudio"
 
 version := "1.0-SNAPSHOT"
 
-incOptions := incOptions.value.withNameHashing(true)
 updateOptions := updateOptions.value.withCachedResolution(cachedResoluton = true)
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala, PlayAkkaHttp2Support)
@@ -53,6 +52,8 @@ libraryDependencies ++= {
 }
 
 pipelineStages := Seq(digest, gzip)
+
+JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
 
 StylusKeys.compress in Assets := true
 includeFilter in (Assets, StylusKeys.stylus) := "*.styl"
