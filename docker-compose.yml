@@ -1,8 +1,9 @@
 version: '3.5'
 services:
   swanaudio:
-    image: pitchplay/scala-dev:jdk8-web
+    image: swanaudio/scala-node
     command: '~run'
+    working_dir: /usr/src/app
     volumes:
       - .:/usr/src/app
       - /root/.ivy2
